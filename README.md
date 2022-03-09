@@ -17,3 +17,6 @@ Programa que ler uma lista  aleatória de número naturais de um arquivo e os in
 Programa que ler os filmes que estão em cartaz , mostra os lugares disponíveis para cada sessão e mostra o valor a ser pago de acordo com o tipo (meia ou inteira).Principais conceitos abordado nesse trabalho:
 *Struct
 *Arquivo
+
+4)Listas de Exercicios - A e B
+Exercicios que escalonam , vão desde simples funções matemática até  exercícios complexos envolvendo Hash , Árvoes e Recursividade.
