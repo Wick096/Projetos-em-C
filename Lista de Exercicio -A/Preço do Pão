@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<conio.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    char nome[20];
+    float qtdFarinha,qtdLitros,qtdqWatts,vF,vA,vWatts,precoCusto,precoVenda,lucro;
+    
+    FILE*arq;
+    printf("Nomeie o arquivo: ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("Digite a quantidade de farinha:\n");
+    scanf("%f",&qtdFarinha);
+    printf("Digite o valor da farinha:\nR$");
+    scanf("%f",&vF);
+    printf("Digite a quantidade de litros de água:\n");
+    scanf("%f",&qtdLitros);
+    printf("Digite o valor da água:\nR$");
+    scanf("%f",&vA);
+    printf("Digite a quantidade de luz gasta:\n");
+    scanf("%f",&qtdqWatts);
+    printf("Digite o valor da conta:\nR$");
+    scanf("%f",&vWatts);
+    
+    
+    precoCusto=(qtdFarinha*vF)+(qtdLitros*vA)+(qtdqWatts*vWatts);
+    lucro=precoCusto*0.30;
+    precoVenda=precoCusto+lucro;
+    
+    printf("O preço de custo é:\nR$%f",precoCusto);
+    printf("O lucor é:\nR$%f ",lucro);
+    printf("O preço de venda sugerido é:R$%f",precoVenda);
+    
+    fprintf(nome,"%f",precoCusto);
+    fprintf(nome,"%f",lucro);
+    fprintf(nome,"%f",precoVenda);
+    
+    fclose(arq);
+    return 0;
+}

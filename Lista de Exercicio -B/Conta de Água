@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    float consumo,conta,valorConta;
+    int tipoCons;
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%s"&nome);
+    
+    printf("Digite o valor da conta: ");
+    scanf("%f",&conta);
+    printf("Digite o segmento (1-industria,2-residencial ou 3-comercial):");
+    scanf("%d",&tipoCons);
+    printf("Digite o consumo de água(m3): ");
+    scanf("%d",&consumo);
+    
+    if(tipoCons==1)
+    {
+        valorConta=(conta + 500)+(0.025*consumo);
+        printf("O valor real a ser pago é:\nR$% ",valorConta);
+        
+    }
+    else if(tipoCons==2)
+    {
+        valorConta=(conta + 5)+(0.05*consumo);
+        printf("O valor real a ser pago é:\nR$% ",valorConta);
+    }
+    else
+    {
+        valorConta=(conta + 800)+(0.04*consumo);
+        printf("O valor real a ser pago é:\nR$% ",valorConta);
+    }
+    
+    fopen(arq);
+    return 0;
+}

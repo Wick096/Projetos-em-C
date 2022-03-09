@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<conio.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    char nome[20],resposta;
+    int nFunc,nFilhos;
+    float hTraba,vPhor,vSF,calculo;
+    
+    FILE*arq;
+
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("Digite o número do funcionário: ");
+    scanf("%f",&nFunc);
+    printf("Digite a quantidade de horas trabalhadas: ");
+    scanf("%f",&hTraba);
+    printf("Digite o valor recebido por hora:\nR$");
+    scanf("%f",&vSF)
+    
+    printf("Tem filhos com menos de 14 anos?: ");
+    scanf("%s",resposta);
+    if(strcmp(resposta,"sim")==0)
+    {
+        printf("Digite a quantidade filhos com menos de 14:");
+        calculo=(hTraba*0.14)+(hTraba*vSF);
+        printf("O valor total à receber é:\nR$%f",calculo);
+        fprintf(nome,"%f",calculo);
+    }
+    else
+    {
+        calculo=(hTraba*vSF);
+        printf("O valor total à receber é:\nR$%f",calculo);
+        fprintf(nome,"%f",calculo);
+    }
+    fclose(arq);
+    return 0;
+    
+}

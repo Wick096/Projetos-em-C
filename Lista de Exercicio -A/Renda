@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+#include<locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    int pubTotal;
+    float renda,ingGeral,ingPop,ingArq,ingCad;
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("\nDigite o público total: ");
+    scanf("%f",&pubTotal);
+    
+    ingPop=(pubTotal*0.1)*1;
+    ingGeral=(pubTotal*0.5)*5;
+    ingArq=(pubTotal*0.30)*10;
+    ingCad=(pubTotal*0.10)*20;
+    renda=(ingCad+ingArq+ingGeral+ingPop);
+    
+    printf("\nA renda total do jogo foi de: R$%f",renda);
+    fprintf(nome,"R$%f",renda);
+    
+    fclose(arq);
+    return 0;
+    
+    
+}

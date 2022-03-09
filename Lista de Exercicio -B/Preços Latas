@@ -1,0 +1,29 @@
+#include<string.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<stdio.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    float preco,raio,altura,aBase,aLateral,aTot,custo;
+    int qtdLatas;
+    
+    printf("Digite o preço da lata (5l): ");
+    scanf("%f",&preco);
+    printf("Digite o raio e a altura do cilindro: ");
+    scanf("%f %f",&raio,&altura);
+    aBase=3.14*(raio*raio);
+    aLateral=(2*3.14*raio*altura);
+    aTotal=(2*aBase)+aLateral;
+    
+    qtdLatas = atotal / 15;
+    custo = qtdLatas * preco;
+    
+    printf("Serão necessárias :%d de tintas",qtdLatas);
+    printf("O custo será de:R$%f",custo);
+    
+    return 0;
+}

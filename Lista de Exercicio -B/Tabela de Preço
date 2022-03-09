@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char cargoF[30];
+    float salAntigo,salNovo,dif;
+    char nome[20];
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",nome);
+    fopen(nome,"w");
+    
+    printf("Digite o cargo do funcionário: ");
+    scanf("%s",cargoF);
+    printf("Digite o salário inicial:\nR$ ");
+    scanf("%f",&salAntigo);
+    
+    if(strcmp(cargoF,"gerente")==0)
+    {
+        salNovo=(salAntigo*0.10)+salAntigo;
+        dif=salNovo-salAntigo;
+        printf("O Novo salário do funcionário é:\nR$ ",salNovo);
+        printf("A diferença do salário antigo para o novo é :\nR$",dif);
+    }
+    else if(strcmp(cargoF,"tecnico")==0)
+    {
+        salNovo=(salAntigo*0.20)+salAntigo;
+        dif=salNovo-salAntigo;
+        printf("O Novo salário do funcionário é:\nR$ ",salNovo);
+        printf("A diferença do salário antigo para o novo é :\nR$",dif);
+    }
+    
+    else if(strcmp(cargoF,"engenheiro")==0)
+    {
+        salNovo=(salAntigo*0.30)+salAntigo;
+        dif=salNovo-salAntigo;
+        printf("O Novo salário do funcionário é:\nR$ ",salNovo);
+        printf("A diferença do salário antigo para o novo é :\nR$",dif);
+    }
+    else
+    {
+        salNovo=(salAntigo*0.40)+salAntigo;
+        dif=salNovo-salAntigo;
+        printf("O Novo salário do funcionário é:\nR$ ",salNovo);
+        printf("A diferença do salário antigo para o novo é :\nR$",dif);
+    
+    }
+    
+    fclose(arq);
+    return 0;
+}

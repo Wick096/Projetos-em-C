@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+
+float pA(float u1,float n,float r)
+{
+    float un;
+    un=u1+(n-1)*r;
+    
+    return un;
+}
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    float u1,n,r;
+    float un;
+    char nome[20];
+    
+    FILE*arq;
+    arq= fopen(nome,"w");
+    
+    printf("Digite os valores da Progressão Aritmética:\n ");
+    scanf("%f %f %f",&u1,&n,&r);
+    
+    un=pA(u1,n,r);
+    
+    printf("O valor da progressão aritmética é:%f",un);
+    
+    fclose(arq);
+    return 0;
+}

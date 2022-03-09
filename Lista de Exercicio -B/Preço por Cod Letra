@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char codP[20];
+    int qtdComprada;
+    float tot;
+    
+    printf("Digite o código: ");
+    scanf("%s",codP);
+    printf("Digite a quantidade de itens compradas:");
+    scanf("%d",&qtdComprada);
+    
+    if(strcmp(codP,"abcd")==0)
+    {   
+        tot=qtdComprada*5.30;
+        printf("O preço final a ser pago é: %f",tot);
+    }
+    
+    else if(strcmp(codP,"xykf")==0)
+    {   
+        tot=qtdComprada*6.80;
+        printf("O preço final a ser pago é: %f",tot);
+    }
+    else if(strcmp(codP,"btsd")==0)
+    {   
+        tot=qtdComprada*6.0;
+        printf("O preço final a ser pago é: %f",tot);
+    }
+    else if(strcmp(codP,"ypov")==0)
+    {   
+        tot=qtdComprada*2.80;
+        printf("O preço final a ser pago é: %f",tot);
+    }
+}

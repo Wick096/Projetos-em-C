@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<string.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    char codP[20];
+    int qtdComprada;
+    float cTotal;
+    
+    printf("Digite o código do produto: ");
+    scanf("%s",codP);
+    printf("Digite a quantidade de produtos compradros");
+    scanf("%d",&qtdComprada);
+    
+    if(strcmp(codP,"1001")==0)
+    {
+        cTotal=qtdComprada*5.32;
+        printf("O valor total das compras é: \nR$",cTotal);
+        
+    }
+    else if(strcmp(codP,"1234")==0)
+    {
+        cTotal=qtdComprada*6.35;
+        printf("O valor total das compras é: \nR$",cTotal);
+        
+    }
+    else if(strcmp(codP,"6548"==0)
+    {
+        cTotal=qtdComprada*2.37;
+        printf("O valor total das compras é: \nR$",cTotal);
+        
+    }
+    else if(strcmp(codP,"0987"==0)
+    {
+        cTotal=qtdComprada*6.45;
+        printf("O valor total das compras é: \nR$",cTotal);
+        
+    }
+    else if(strcmp(codP,"7623"==0)
+    {
+        cTotal=qtdComprada*7.32;
+        printf("O valor total das compras é: \nR$",cTotal);
+        
+    }
+    else
+    {
+        printf("Código Inválido !");
+    }
+    
+    return 0;
+}

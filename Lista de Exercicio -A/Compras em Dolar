@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<conio.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    char nome[20];
+    float vCompras,tDolar,icms,pLucro,conv,conv1;
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("Digite o valor da compra (em dolar):\n$");
+    scanf("%f",&vCompras);
+    printf("Digite a taxa do dolar:\n%");
+    scanf("%f",&tDolar);
+    printf("Digite o percentual do ICMS:\n");
+    scanf("%f",&icms);
+    printf("Digite o percentual do lucro da empresa:");
+    scanf("%f",&pLucro);
+    
+    conv=(vDolar*tDolar);
+    conv1=(conv*icms/100)+(conv*pLucro/100)+conv;
+    
+    printf(" O valor pago em reais é:\nR$%f",conv1);
+    fprintf(nome,"%f",conv1);
+    
+    fclose(arq);
+    return 0;
+    
+    
+
+}

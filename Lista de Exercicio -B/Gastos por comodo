@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<math.h>
+#include<locale.h>
+#include<stdlib.h>
+
+float calcArea(float larg,float comp)
+{
+    float a;
+    a=larg*comp;
+    return a;
+}
+
+float qtdLamp(float metro,float tipo)
+{   
+    float porcentagem;
+    float qtd;
+    if(tipo==1)
+    {
+        porcentagem=12;
+    }
+    else if(tipo==2)
+    {
+        procentagem=15;
+    }
+    else if(tipo==3)
+    {
+        procentagem=18;
+    }
+    else if(tipo==4)
+    {
+        porcentagem=20;
+    }
+    else
+    {
+        porcentagem=22;
+    }
+    
+    qtd=porcentagem*metro;
+    return qtd;
+}
+
+int main()
+{
+    setlocale(LC_ALL"Portuguese");
+    int tamanho,nLamp;
+    float larg,comp;
+    char nome[20];
+    
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",&nome);
+    
+    FILE*arq;
+    arq=fopen(nome,"w");
+    
+    printf("Digite o tipo do comodo: ");
+    scanf("%d",&tipo);
+    printf("Digite a largura e o comprimento do comodo:\n\n");
+    scanf("%f %f",&larg,&comp);
+    
+    tamanho=calcArea(larg,comp);
+    nLamp(tipo,tamanho);
+    
+    printf("\n\n Pela metragem de seu comodo voce ira precisar de %f lampadas",ceil(nlampadas));
+    
+    fclose(arq);
+    return 0;
+}

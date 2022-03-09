@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<locale.h>
+#include<conio.h>
+
+int main ()
+{
+    setlocale(LC_ALL,"portguese");
+    int diaSemana,tipoA;
+    float valorD,preco;
+    
+    printf("Digite o dia da semana: ");
+    scanf("%d",&diaSemana);
+    printf("Digite o preço:\nR$ ");
+    scanf("%f",&preco);
+    printf("Digite  o tipo (lançamento ou comum): ");
+    scanf("%d",&tipoA);
+    
+    if(tipoA==1 && diaSemana==2 || diaSemana==3 || diaSemana==4)
+    {
+        valorD=(preco-(preco*0.40))+(preco*0.15);
+        printf("O preço a final a ser pago é:\nR$%f",valorD);
+    }
+    else if(tipoA==2 && diaSemana==2 || diaSemana==3 || diaSemana==4))
+    {   
+        valorD=(preco-(preco*0.40))+(preco*0.15);
+        printf("O preço a final a ser pago é:\nR$%f",valorD);
+        
+    }
+    else
+    {
+        printf("O preço a final a ser pago é:\nR$%f",preco);
+    }
+    fclose(arq);
+    return 0;
+}

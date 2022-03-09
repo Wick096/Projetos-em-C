@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    int tipo;
+    float raio,altura,v,pi;
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%s",&nome);
+    fopen(nome,"w");
+    
+    printf("Digite a formula que deseja calcular (1-Cone,2-Clindro ou 3-Esfera): ");
+    scanf("%d",&tipo);
+    
+    if(tipo==1)
+    {
+        printf("Digite o raio e a altura(Considere Pi=3,14): ");
+        scanf("%f %f",&raio,&altura);
+        v=((3.14*(raio*raio)*altura))/3;
+        
+        printf("O valor do raio: %f",v);
+    
+    }
+    else if(tipo==2)
+    {
+        printf("Digite o raio do cilindro(Considere pi=3,14): ");
+        scanf("%f",&raio);
+        
+        v=(3.14*(raio*raio));
+        printf("O valor do Cilindro é:%f",v);
+    }
+    else
+    {
+        printf("Digite o raio da esfera:");
+        scanf("%f",&raio);
+        
+        v=2*raio;
+        printf("O valor da esfera é:%f",v);
+    }
+    fclose(arq);
+    return 0;
+}

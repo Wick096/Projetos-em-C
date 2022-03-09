@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<locale.h>
+#include<conio.h>
+
+int main ()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    float dNormal,dPromo,mPromo,mSemP,lucroPreju;
+    
+    FILE*arq;
+    printf("Nomeie o arquivo (com extensão): ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("Digite o valor da diária normal:\nR$");
+    scanf("%f",&dNormal);
+    
+    dPromo=dNormal*0.22;
+    mSemP=(42*0.4)*8*dNormal;
+    mPromo=(42*0.7)*8*dPromo;
+    lucroPreju=mPromo-mSemP;
+    
+    printf("O preço da diária normal é: \nR$%f ",dNormal);
+    printf("O preço da diária com promoção é:\nR$%f ",dPromo);
+    printf("A Média sem a promoção é :\n%f",mSemP);
+    printf("A Média com a promoção é :\n%f",mPromo);
+    printf("O lucro ou prejuízo é :\nR$%f",lucroPreju);
+    
+    fprintf(nome,"%f",dNormal);
+    fprintf(nome,"%f",dPromo);
+    fprintf(nome,"%f",mSemP);
+    fprintf(nome,"%f",mPromo)
+    fprintf(nome,"%f",lucroPreju);
+    
+    fclose(arq);
+    return 0;
+}

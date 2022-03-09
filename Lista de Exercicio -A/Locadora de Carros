@@ -1,0 +1,30 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<locale.h>
+#include<math.h>
+#include<conio.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    float txFixa,txKm,nKm,vTotal,vDes;
+    int nDias;
+    
+    FILE*arq;
+    printf("Digite o nome para o arquivo: ");
+    scanf("%s",&nome);
+    arq=fopen(nome,"w");
+    
+    printf("Digite a taxa fixa: \n");
+    scanf("%f",&txFixa);
+    printf("Digite a taxa de quilometragem: ");
+    scanf("%f",&txKm);
+    printf("Digite o número de dias:\n");
+    scanf("%d",&nDias);
+    printf("Digite os quilometros rodados:\n");
+    scanf("%f",nKm);
+    
+    vTotal=((txFixa-(txFixa*0.10));
+    vDes=(nDias*0.10)*nDias;
+}

@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+#include<locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    char nome[20];
+    int mat,pond;
+    float n1,n2,n3,media;
+    
+    FILE*arq;
+    printf("Digite o nome do arquivo: ");
+    scanf("%f",&nome);
+    
+    printf("Digite a matrícula do aluno: ");
+    scanf("%d",&mat);
+    printf("Digite as 3 notas do aluno: ");
+    scanf("%f %f %f ",&n1,&n2,&n3);
+    
+    if(n1>n2 && n1>n3)
+    {
+        media=((n1*4)+(n2*3)+(n3*3));
+        printf("A média ponderada do aluno foi:%f ",media);
+    }
+    else if(n2>n1 && n2>n3)
+    {
+        media=((n1*4)+(n2*3)+(n3*3));
+        printf("A média ponderada do aluno foi:%f ",media);
+    }
+    else if(n3>n1 && n3>n2)
+    {
+        media=((n1*4)+(n2*3)+(n3*3));
+        printf("A média ponderada do aluno foi:%f ",media);
+        
+    }
+    fclose(arq);
+    return 0;
+}
